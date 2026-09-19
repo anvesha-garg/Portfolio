@@ -163,11 +163,7 @@
 
     /* RESUME */
     #resume { background:var(--bg3);border-top:1px solid var(--border);border-bottom:1px solid var(--border); }
-    .resume-actions { display:flex;gap:.8rem;flex-wrap:wrap;margin-bottom:1.8rem; }
-    .resume-frame { background:var(--card);border:1px solid var(--border);border-radius:10px;overflow:hidden; }
-    .resume-frame object { display:block;width:100%;height:720px; }
-    .resume-fallback { padding:3rem 1.5rem;text-align:center;font-size:.85rem;color:var(--muted);line-height:1.7; }
-    .resume-fallback a { color:var(--vl); }
+    .resume-actions { display:flex;gap:.8rem;flex-wrap:wrap; }
 
     /* CONTACT */
     #contact { background:var(--bg);text-align:center; }
@@ -197,7 +193,6 @@
       .about-grid{grid-template-columns:1fr;gap:2rem;}
       .proj-grid{grid-template-columns:repeat(2,1fr);}
       .nav-links{gap:1rem;}
-      .resume-frame{display:none;}
       .tl-item{grid-template-columns:1px 1fr;}
       .tl-l{display:none;}
     }
@@ -486,6 +481,23 @@
 
     <div class="pc r">
       <div class="ph">
+        <div class="pi">📝</div>
+        <div class="plinks">
+          <a href="https://github.com/anvesha-garg/redline" target="_blank" class="pgh" title="GitHub"><svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg></a>
+          <a href="https://redline-1.onrender.com" target="_blank" class="plive">↗ Live</a>
+        </div>
+      </div>
+      <div class="ptitle">Redline — Resume &amp; Job Fit Analyzer</div>
+      <div class="pstats"><span class="pstat"><span class="star">★</span> 1 star</span><span class="pstat">JavaScript</span><span class="pstat" style="color:var(--green);">● Live</span></div>
+      <p class="pdesc">Upload or paste a resume and a job description (PDF, Word or text) and get a fit score, matched, partial and missing skills, and specific rewrite suggestions from Llama 3.3 70B, laid out like an editor's margin notes.</p>
+      <div class="pstack">
+        <span class="stag">JavaScript</span><span class="stag">Node.js</span><span class="stag">Express.js</span>
+        <span class="stag">Groq LLM</span><span class="stag">pdf.js</span><span class="stag">mammoth.js</span>
+      </div>
+    </div>
+
+    <div class="pc r">
+      <div class="ph">
         <div class="pi">📄</div>
         <div class="plinks">
           <a href="https://github.com/anvesha-garg/retrieval-intelligence-engine" target="_blank" class="pgh" title="GitHub"><svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg></a>
@@ -692,7 +704,7 @@
 </section>
 
 <!-- RESUME -->
-<!-- Put your resume PDF at: resume/Anvesha_Garg_Resume.pdf (or change the path in the 3 places below) -->
+<!-- Put your resume PDF at: resume/Anvesha_Garg_Resume.pdf (or change the path in the 2 links below) -->
 <section id="resume">
   <div class="sl r">Resume</div>
   <h2 class="st r">My resume.</h2>
@@ -700,14 +712,6 @@
   <div class="resume-actions r">
     <a href="resume/Anvesha_Garg_Resume.pdf" download class="btn-p">Download resume</a>
     <a href="resume/Anvesha_Garg_Resume.pdf" target="_blank" class="btn-s">Open in new tab</a>
-  </div>
-  <div class="resume-frame r">
-    <object data="resume/Anvesha_Garg_Resume.pdf#toolbar=0" type="application/pdf">
-      <div class="resume-fallback">
-        The resume preview isn't available here.
-        <a href="resume/Anvesha_Garg_Resume.pdf" target="_blank">Open the PDF</a> to read it.
-      </div>
-    </object>
   </div>
 </section>
 
